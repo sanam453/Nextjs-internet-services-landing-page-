@@ -2,6 +2,9 @@
 
 import * as React from "react";
 import { useState, useEffect } from "react";
+
+// @components
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -14,7 +17,8 @@ import {
 
 // charts import
 import dynamic from "next/dynamic";
-import Image from "next/image";
+
+// @icons
 import { ArrowRight } from "lucide-react";
 
 // @ts-ignore
@@ -101,6 +105,9 @@ export function Hero() {
   useEffect(() => {
     setIsClient(true);
   }, []);
+
+  // brand images
+  const BRAND_IMAGES = ["asana", "github", "gitlab", "spotify", "adobe"];
 
   return (
     <section className="my-20 text-center">
@@ -198,6 +205,23 @@ export function Hero() {
             </CardContent>
           </div>
         </Card>
+      </div>
+      <div className="mt-16">
+        <p className="text-lg">
+          Loved by <strong>20 million+</strong> users
+        </p>
+        <div className="flex flex-wrap justify-center items-center gap-16 mt-6">
+          {BRAND_IMAGES.map((img, key) => (
+            <Image
+              key={key}
+              height={100}
+              width={100}
+              src={`/logos/${img}.png`}
+              alt="pattern"
+              className="h-12 w-32"
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
