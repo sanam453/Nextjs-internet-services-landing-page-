@@ -46,15 +46,15 @@ const data = [
     href: "/",
   },
   {
-    title: "About",
+    title: "Products",
+    href: "/",
+  },
+  {
+    title: "Resources",
     href: "/",
   },
   {
     title: "Pricing",
-    href: "/",
-  },
-  {
-    title: "Contact",
     href: "/",
   },
 ];

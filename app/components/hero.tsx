@@ -125,7 +125,7 @@ export function Hero() {
           Learn More
         </Button>
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 items-center mt-14">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 items-center mt-20">
         <Card className="rounded-2xl w-full">
           <CardHeader className="text-left">
             <Badge variant="secondary" className="max-w-fit mb-2">
@@ -206,7 +206,7 @@ export function Hero() {
           </div>
         </Card>
       </div>
-      <div className="mt-16">
+      <div className="mt-20">
         <p className="text-lg">
           Loved by <strong>20 million+</strong> users
         </p>
