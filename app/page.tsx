@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Navbar, Hero } from "./components";
+import { Navbar, Hero, Products } from "./components";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
       <main className="relative w-full container mx-auto">
         <Navbar />
         <Hero />
+        <Products />
       </main>
     </>
   );
