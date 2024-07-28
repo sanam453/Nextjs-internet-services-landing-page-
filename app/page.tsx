@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Navbar, Hero, Products } from "./components";
+import { Navbar, Hero, Products, Resources } from "./components";
 
 export default function Home() {
   return (
@@ -9,6 +8,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Products />
+        <Resources />
       </main>
     </>
   );
