@@ -1,4 +1,4 @@
-import { Navbar, Hero, Products, Resources, Pricing } from "./components";
+import { Navbar, Hero, Products, Resources, Pricing, Footer } from "./components";
 
 export default function Home() {
   return (
@@ -11,6 +11,7 @@ export default function Home() {
         <Resources />
         <Pricing />
       </main>
+        <Footer />
     </>
   );
 }

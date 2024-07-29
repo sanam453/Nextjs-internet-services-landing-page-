@@ -3,3 +3,4 @@ export * from "./hero";
 export * from "./products";
 export * from "./resources";
 export * from "./pricing";
+export * from "./footer";
