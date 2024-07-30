@@ -11,7 +11,7 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: "Network",
-  description: "Internet Service Landing Page",
+  description: "",
 };
 
 export default function RootLayout({
