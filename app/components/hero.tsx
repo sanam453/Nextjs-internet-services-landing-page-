@@ -123,40 +123,47 @@ export function Hero() {
         <Button size="lg">Get Started</Button>
         <Button size="lg" variant="outline">
           Learn More
+          <ArrowRight className="ml-2 h-4 w-4 mt-1" />
         </Button>
       </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 items-center mt-20">
-        <Card className="rounded-2xl w-full">
-          <CardHeader className="text-left">
-            <Badge variant="secondary" className="max-w-fit mb-2">
-              Your earnings
-            </Badge>
-            <CardTitle className="text-4xl">$50.00</CardTitle>
-            <CardDescription>Next playout in:</CardDescription>
-            <CardDescription className="font-medium text-black">
-              29,345 pts
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="-mb-14 -mr-6 -ml-11">
-            {isClient && (
-              <Chart
-                // @ts-ignore
-                options={lineChartOptions}
-                series={lineChartSeries}
-                type="area"
-                height={220}
-              />
-            )}
-          </CardContent>
+        <Card className="rounded-2xl w-full relative h-96 group">
+          <div
+            className="bg-[url('/pattern4.jpg')] cursor-pointer rotate-180 transition-all opacity-0 group-hover:opacity-20 duration-500 ease-in-out
+           h-full rounded-2xl absolute bg-cover bg-center bg-no-repeat w-full"
+          />
+          <div className="relative">
+            <CardHeader className="text-left">
+              <Badge variant="secondary" className="max-w-fit mb-2">
+                Your earnings
+              </Badge>
+              <CardTitle className="text-4xl">$50.00</CardTitle>
+              <CardDescription>Next playout in:</CardDescription>
+              <CardDescription className="font-medium text-black">
+                29,345 pts
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="-mb-14 -mr-6 -ml-11">
+              {isClient && (
+                <Chart
+                  // @ts-ignore
+                  options={lineChartOptions}
+                  series={lineChartSeries}
+                  type="area"
+                  height={220}
+                />
+              )}
+            </CardContent>
+          </div>
         </Card>
-        <Card className="rounded-2xl w-full h-96">
+        <Card className="rounded-2xl w-full h-96 group">
           <CardHeader>
             <Image
               height={100}
               width={100}
               src="/speed2.png"
               alt="pattern"
-              className="h-52 w-52 mx-auto mb-6"
+              className="h-52 w-52 mx-auto mb-6 cursor-pointer transition-all group-hover:rotate-180 duration-1000 ease-in-out"
             />
           </CardHeader>
           <CardContent>
@@ -181,7 +188,7 @@ export function Hero() {
                   height={100}
                   width={100}
                   src="/icons/Apple.svg"
-                  alt="pattern"
+                  alt="Apple"
                   className="h-7 w-7"
                 />
                 <div className="ml-2 text-left">
@@ -194,7 +201,7 @@ export function Hero() {
                   height={100}
                   width={100}
                   src="/icons/google-play.svg"
-                  alt="pattern"
+                  alt="google-play"
                   className="h-7 w-7"
                 />
                 <div className="ml-2 text-left">

@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 import {
   NavigationMenu,
@@ -21,8 +20,10 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
+// @icons
+import { Menu } from "lucide-react";
 interface MenuItemPropsType {
   title: string;
   href: string;
@@ -47,15 +48,15 @@ const data = [
   },
   {
     title: "Products",
-    href: "/",
+    href: "#products",
   },
   {
     title: "Resources",
-    href: "/",
+    href: "#resources",
   },
   {
     title: "Pricing",
-    href: "/",
+    href: "#pricing",
   },
 ];
 
@@ -95,17 +96,19 @@ export function Navbar() {
                 <Image height={80} width={80} src="/logo.svg" alt="logo" />
               </SheetTitle>
             </SheetHeader>
-            <SheetDescription className="-ml-4">
+            <SheetDescription className="-ml-5">
               <NavigationMenu>
-                <NavigationMenuList className="flex flex-col text-slate-950">
+                <NavigationMenuList className="flex flex-col text-slate-950 items-start ml-3">
                   {data.map((props, key) => (
                     <MenuItem key={key} {...props} />
                   ))}
                 </NavigationMenuList>
               </NavigationMenu>
-              <div className="flex gap-4 pl-4 pt-4">
-                <Button variant="outline">Login</Button>
-                <Button>Getting Started</Button>
+              <div className="flex gap-4 ml-8 mt-4">
+                <Button className="w-full" variant="outline">
+                  Login
+                </Button>
+                <Button className="w-full">Getting Started</Button>
               </div>
             </SheetDescription>
           </SheetContent>

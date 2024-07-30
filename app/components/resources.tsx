@@ -14,7 +14,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 export function Resources() {
   return (
-    <section className="mb-32 text-center">
+    <section id="resources" className="mb-32 text-center">
       <h1 className="text-4xl font-bold tracking-tight lg:text-5xl capitalize max-w-3xl mx-auto !leading-snug">
         Comprehensive Internet Service Resources
       </h1>

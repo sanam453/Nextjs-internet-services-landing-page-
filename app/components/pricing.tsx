@@ -20,7 +20,7 @@ interface PricingCardPropsType {
 
 function PricingCard({ title, options, price }: PricingCardPropsType) {
   return (
-    <Card className="w-full shadow-none border-none">
+    <Card className="w-full shadow-none hover:xl:-translate-y-12 duration-500 rounded-xl">
       <CardHeader className="text-left text-2xl font-bold">{title}</CardHeader>
       <CardContent className="space-y-4">
         {options.map((option, key) => (
@@ -86,7 +86,7 @@ const data = [
 
 export function Pricing() {
   return (
-    <section className="mb-32 text-center">
+    <section id="pricing" className="mb-32 text-center">
       <h1 className="text-4xl font-bold tracking-tight lg:text-5xl capitalize max-w-3xl mx-auto !leading-snug">
         The right plan for your business
       </h1>
@@ -94,11 +94,11 @@ export function Pricing() {
         We have several powerful plans to showcase your business and get
         discovers as a creative entrepreneure.
       </p>
-      <Card className="p-6 mt-16 grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-10 rounded-2xl">
+      <div className="mt-20 grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-6 rounded-2xl">
         {data.map((props, key) => (
           <PricingCard key={key} {...props} />
         ))}
-      </Card>
+      </div>
     </section>
   );
 }

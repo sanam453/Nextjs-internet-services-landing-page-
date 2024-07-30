@@ -16,7 +16,7 @@ import { Calendar, Cog, MessageCircleIcon, Pencil } from "lucide-react";
 
 export function Products() {
   return (
-    <section className="my-36 text-center">
+    <section id="products" className="my-36 text-center">
       <h1 className="text-4xl font-bold tracking-tight lg:text-5xl capitalize max-w-3xl mx-auto !leading-snug">
         Organizing meetings on a large scale made ease
       </h1>
@@ -25,9 +25,9 @@ export function Products() {
       </p>
       <div className="mt-8 max-w-6xl mx-auto">
         <Tabs defaultValue="analytics">
-          <TabsList className="grid w-80 mx-auto grid-cols-2">
-            <TabsTrigger value="analytics">Analytics</TabsTrigger>
-            <TabsTrigger value="sales">Sales</TabsTrigger>
+          <TabsList className="grid w-80 mx-auto grid-cols-2 h-14 px-2 rounded-lg bg-primary-foreground">
+            <TabsTrigger className="py-2 text-base rounded-md" value="analytics">Analytics</TabsTrigger>
+            <TabsTrigger className="py-2 text-base rounded-md" value="sales">Sales</TabsTrigger>
           </TabsList>
           <TabsContent
             value="analytics"
@@ -35,8 +35,8 @@ export function Products() {
           >
             <Card className="text-left w-full rounded-2xl">
               <CardHeader>
-                <div className="p-6 bg-primary-foreground rounded-2xl max-w-fit mb-4">
-                  <Calendar className="h-10 w-10" />
+                <div className="p-5 bg-primary-foreground hover:bg-primary transition-all duration-500 hover:text-white rounded-xl max-w-fit mb-4">
+                  <Calendar className="h-9 w-9" />
                 </div>
                 <CardTitle className="!mb-2">
                   Make it easy to book meetings with you
@@ -46,19 +46,19 @@ export function Products() {
                   anywhere on your website and adding available times to emails.
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="hover:scale-105 duration-500">
                 <Image
                   height={1024}
                   width={1024}
                   src="/data-card.png"
-                  alt="pattern"
+                  alt="data-card"
                 />
               </CardContent>
             </Card>
             <Card className="text-left w-full rounded-2xl">
               <CardHeader>
-                <div className="p-6 bg-primary-foreground rounded-2xl max-w-fit mb-4">
-                  <Pencil className="h-10 w-10" />
+                <div className="p-5 bg-primary-foreground hover:bg-primary transition-all duration-500 hover:text-white rounded-xl max-w-fit mb-4">
+                  <Pencil className="h-9 w-9" />
                 </div>
                 <CardTitle className="!mb-2">
                   Customize exactly when you&apos;re booked
@@ -68,7 +68,7 @@ export function Products() {
                   scheduling rules, buffers and more.
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="hover:scale-105 duration-500">
                 <Image
                   height={1024}
                   width={1024}
@@ -85,8 +85,8 @@ export function Products() {
           >
             <Card className="text-left w-full rounded-2xl">
               <CardHeader>
-                <div className="p-6 bg-primary-foreground rounded-2xl max-w-fit mb-4">
-                  <MessageCircleIcon className="h-10 w-10" />
+                <div className="p-5 bg-primary-foreground hover:bg-primary transition-all duration-500 hover:text-white rounded-xl max-w-fit mb-4">
+                  <MessageCircleIcon className="h-9 w-9" />
                 </div>
                 <CardTitle className="!mb-2">
                   Engage & Connect: Join the Conversation
@@ -97,7 +97,7 @@ export function Products() {
                   wide range of topics.
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="hover:scale-105 duration-500">
                 <Image
                   height={1024}
                   width={1024}
@@ -108,8 +108,8 @@ export function Products() {
             </Card>
             <Card className="text-left w-full rounded-2xl">
               <CardHeader>
-                <div className="p-6 bg-primary-foreground rounded-2xl max-w-fit mb-4">
-                  <Cog className="h-10 w-10" />
+                <div className="p-5 bg-primary-foreground hover:bg-primary transition-all duration-500 hover:text-white rounded-xl max-w-fit mb-4">
+                  <Cog className="h-9 w-9 hover:animate-spin" />
                 </div>
                 <CardTitle className="!mb-2">
                   Customize Your Experience
@@ -120,7 +120,7 @@ export function Products() {
                   just the way you like it
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="hover:scale-105 duration-500">
                 <Image
                   height={1024}
                   width={1024}
